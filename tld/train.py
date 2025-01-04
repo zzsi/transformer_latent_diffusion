@@ -178,3 +178,20 @@ def main(config: ModelConfig) -> None:
 
 # args = (config, data_path, val_path)
 # notebook_launcher(training_loop)
+if __name__ == "__main__":
+    from tld.train import main
+    from tld.configs import ModelConfig, DataConfig, TrainConfig
+
+    data_config = DataConfig(
+        latent_path="latent_folder/mj_latents.npy",
+        text_emb_path="latent_folder/mj_text_emb.npy",
+        val_path="latent_folder/val_encs.npy", # "val_emb.npy"
+    )
+
+    model_cfg = ModelConfig(
+        data_config=data_config,
+        train_config=TrainConfig(n_epoch=100, save_model=True, compile=False, use_wandb=False),
+    )
+
+    main(model_cfg)
+

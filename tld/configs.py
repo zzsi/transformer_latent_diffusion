@@ -7,7 +7,7 @@ class DataDownloadConfig:
     data_link: str
     caption_col: str = "caption"
     url_col: str = "url"
-    latent_save_path: str = "latents_folder"
+    latent_save_path: str = "latent_folder"
     raw_imgs_save_path: str = "raw_imgs_folder"
     use_drive: bool = False
     initial_csv_path: str = "imgs.csv"
@@ -20,7 +20,7 @@ class DataDownloadConfig:
 
 @dataclass
 class DenoiserConfig:
-    image_size: int = 16
+    image_size: int = 32 # 16
     noise_embed_dims: int = 256
     patch_size: int = 2
     embed_dim: int = 128
@@ -66,7 +66,7 @@ class TrainConfig:
     beta_b: float = 2.5
     save_and_eval_every_iters: int = 1000
     run_id: str = ""
-    model_name: str = ""
+    model_name: str = "mj.pt"
     compile: bool = True
     save_model: bool = True
     use_wandb: bool = True

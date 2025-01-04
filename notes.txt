@@ -1,0 +1,10 @@
+https://github.com/apapiu/transformer_latent_diffusion/issues/20
+
+The above issues shows where to download preprocessed data. I just downloaded the 2 files to latent_folder.
+
+https://huggingface.co/apapiu/small_ldt/tree/main has the preprocessed data files.
+
+See this discussion: https://huggingface.co/apapiu/small_ldt/discussions/1
+
+mj_latents.npy: (599796, 4, 32, 32), float
+mj_text_embs.npy: (599796, 768)
