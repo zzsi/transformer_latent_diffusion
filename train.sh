@@ -4,7 +4,7 @@
 
 # This is the username in Dockerfile.
 USER=cvl
-GPU_DEVICES=${GPU_DEVICES:-0}  # default GPU id
+GPU_DEVICES=${GPU_DEVICES:-1}  # default GPU id
 
 # Create a data/container_cache directory if it doesn't exist
 mkdir -p data/container_cache
